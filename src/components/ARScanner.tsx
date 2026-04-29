@@ -79,7 +79,7 @@ export default function ARScanner({ isOpen, onClose, targetImage }: ARScannerPro
             <div className="flex flex-col items-center gap-6 pointer-events-auto">
                <div className="bg-white p-4 rounded-2xl shadow-[0_0_50px_rgba(255,215,0,0.2)] border-2 border-highlight-yellow overflow-hidden">
                   <img 
-                    src={`https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(typeof window !== 'undefined' ? window.location.href : '')}`}
+                    src={`https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(typeof window !== 'undefined' ? window.location.href + '?mode=ar' : '')}`}
                     alt="Scan me"
                     className="w-40 h-40"
                   />

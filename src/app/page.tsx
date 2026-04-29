@@ -14,6 +14,16 @@ import { ChevronRight, ChevronLeft } from 'lucide-react';
 export default function Home() {
   const [currentPage, setCurrentPage] = useState(0);
   const [isScannerOpen, setIsScannerOpen] = useState(false);
+
+  // Auto-trigger AR if URL has ?mode=ar
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    if (params.get('mode') === 'ar') {
+      // If we are in AR mode, jump to the pages with the cells (pages 2-3 in 0-index)
+      setCurrentPage(2);
+      setIsScannerOpen(true);
+    }
+  }, []);
   const [isHologramOpen, setIsHologramOpen] = useState(false);
   const [hologramType, setHologramType] = useState<'procariota' | 'eucariota'>('procariota');
 
