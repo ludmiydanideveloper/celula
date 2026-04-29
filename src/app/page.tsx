@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import BookLayout from '@/components/BookLayout';
 import BookPage from '@/components/BookPage';
 import MarginCard from '@/components/MarginCard';
