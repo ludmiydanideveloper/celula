@@ -129,6 +129,7 @@ export default function ARScanner({ isOpen, onClose, targetImage }: ARScannerPro
                 porque A-Frame inyecta elementos globales que pueden entrar en conflicto con React.
                 Para esta implementación, usaremos los tags directamente.
             */}
+            {/* @ts-ignore */}
             <a-scene 
               mindar-image="imageTargetSrc: /targets.mind; autoStart: true; uiScanning: no;" 
               color-space="sRGB" 
@@ -137,26 +138,37 @@ export default function ARScanner({ isOpen, onClose, targetImage }: ARScannerPro
               device-orientation-permission-ui="enabled: false"
               className="w-full h-full"
             >
+              {/* @ts-ignore */}
               <a-assets>
                 {/* Aquí irían los modelos 3D reales */}
+                {/* @ts-ignore */}
                 <a-asset-item id="cellModel" src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.2.2/examples/image-tracking/assets/card-example/softbar/scene.gltf"></a-asset-item>
               </a-assets>
 
+              {/* @ts-ignore */}
               <a-camera position="0 0 0" look-controls="enabled: false" cursor="fuse: false; rayOrigin: mouse;" raycaster="far: ${customFields.lib64}; objects: .clickable"></a-camera>
 
               {/* Target 0 (Procariota) */}
+              {/* @ts-ignore */}
               <a-entity mindar-image-target="targetIndex: 0">
+                {/* @ts-ignore */}
                 <a-sphere position="0 0 0" radius="0.5" color="#E67E22" opacity="0.8" animation="property: rotation; to: 0 360 0; dur: 5000; easing: linear; loop: true">
+                    {/* @ts-ignore */}
                     <a-torus position="0 0 0" radius="0.6" radius-tubular="0.01" color="#F1C40F" rotation="90 0 0"></a-torus>
                 </a-sphere>
+                {/* @ts-ignore */}
                 <a-text value="PROCARIOTA" align="center" position="0 0.8 0" color="#FFFFFF" width="4"></a-text>
               </a-entity>
 
               {/* Target 1 (Eucariota) */}
+              {/* @ts-ignore */}
               <a-entity mindar-image-target="targetIndex: 1">
+                {/* @ts-ignore */}
                 <a-sphere position="0 0 0" radius="0.5" color="#3498DB" opacity="0.8" animation="property: rotation; to: 0 360 0; dur: 5000; easing: linear; loop: true">
+                    {/* @ts-ignore */}
                     <a-sphere position="0 0 0" radius="0.2" color="#2980B9"></a-sphere>
                 </a-sphere>
+                {/* @ts-ignore */}
                 <a-text value="EUCARIOTA" align="center" position="0 0.8 0" color="#FFFFFF" width="4"></a-text>
               </a-entity>
             </a-scene>
