@@ -256,14 +256,14 @@ export default function Home() {
                     <div className="bg-paper-white/50 p-3 rounded-xl border border-charcoal/10">
                       <div className="flex flex-col justify-center bg-white/50 rounded-lg p-2 mb-3 shadow-inner border border-charcoal/10 overflow-hidden">
                         <ARImage 
-                          src="/procariota.jpg" 
+                          src="/prokaryotic.png" 
                           alt="Célula Procariota" 
                           title="Procariota-LVL1"
                           onScanClick={() => setIsScannerOpen(true)}
                         />
                       </div>
                       <div className="flex justify-between items-center px-1">
-                        <div className="text-[10px] font-mono text-charcoal/50 uppercase tracking-widest">Target: Procariota_001</div>
+                        <div className="text-[10px] font-mono text-charcoal/50 uppercase tracking-widest">Target: BioScan_PRK_001</div>
                         <div className="flex gap-2 items-center">
                           <button 
                             onClick={() => setIsScannerOpen(true)}
@@ -292,14 +292,14 @@ export default function Home() {
                     <div className="bg-paper-white/50 p-3 rounded-xl border border-charcoal/10">
                       <div className="flex flex-col justify-center bg-white/50 rounded-lg p-2 mb-3 shadow-inner border border-charcoal/10 overflow-hidden">
                         <ARImage 
-                          src="/eucariota.jpg" 
+                          src="/eukaryotic.png" 
                           alt="Célula Eucariota" 
                           title="Eucariota-LVL100"
                           onScanClick={() => setIsScannerOpen(true)}
                         />
                       </div>
                       <div className="flex justify-between items-center px-1">
-                        <div className="text-[10px] font-mono text-charcoal/50 uppercase tracking-widest">Target: Eucariota_100</div>
+                        <div className="text-[10px] font-mono text-charcoal/50 uppercase tracking-widest">Target: BioScan_EUK_100</div>
                         <div className="flex gap-2 items-center">
                           <button 
                             onClick={() => setIsScannerOpen(true)}
