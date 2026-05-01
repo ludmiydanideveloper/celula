@@ -286,72 +286,9 @@ export default function Home() {
                     </div>
                   </div>
 
-                  {/* EUCARIOTA */}
-                  <div>
-                    <h3 className="text-xl font-bold text-charcoal mb-2 uppercase tracking-wide border-b-2 border-charcoal/10 pb-1">Célula Eucariota</h3>
-                    <div className="bg-paper-white/50 p-3 rounded-xl border border-charcoal/10">
-                      <div className="flex flex-col justify-center bg-white/50 rounded-lg p-2 mb-3 shadow-inner border border-charcoal/10 overflow-hidden">
-                        <ARImage 
-                          src="/eukaryotic.png" 
-                          alt="Célula Eucariota" 
-                          title="Eucariota-LVL100"
-                          onScanClick={() => setIsScannerOpen(true)}
-                        />
-                      </div>
-                      <div className="flex justify-between items-center px-1">
-                        <div className="text-[10px] font-mono text-charcoal/50 uppercase tracking-widest">Target: BioScan_EUK_100</div>
-                        <div className="flex gap-2 items-center">
-                          <button 
-                            onClick={() => setIsScannerOpen(true)}
-                            className="text-[9px] bg-charcoal text-white px-2 py-1 rounded font-bold hover:bg-highlight-yellow hover:text-charcoal transition-colors"
-                          >
-                            MODO AR (CAM)
-                          </button>
-                          <QRTag id="100" />
-                        </div>
-                      </div>
-                      
-                      {/* Componentes abajo */}
-                      <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
-                         <OrganelleItem icon={<IconNucleo />} title="Núcleo" desc="Controla, almacena ADN" />
-                         <OrganelleItem icon={<IconCitoplasmaAzul />} title="Citoplasma" desc="Medio con organelos" />
-                         <OrganelleItem icon={<IconRibosomaAzul />} title="Ribosomas" desc="Sintetizan proteínas" />
-                         <OrganelleItem icon={<IconMitocondria />} title="Mitocondria" desc="Produce energía (ATP)" />
-                         <OrganelleItem icon={<IconGolgi />} title="Aparato de Golgi" desc="Produce energía (ATP)" />
-                         <OrganelleItem icon={<IconCloroplasto />} title="Cloroplasto" desc="Realizan fotosíntesis" />
-                         <OrganelleItem icon={<IconParedVerde />} title="Pared celular" desc="Da forma y protección" />
-                         <OrganelleItem icon={<IconVacuola />} title="Vacuola" desc="Almacena protección" />
-                         <OrganelleItem icon={<IconMembranaVerde />} title="Membrana" desc="Paso de sustancias" />
-                      </div>
-                    </div>
-                  </div>
+                  {/* PROCARIOTA stays here on page 3 */}
 
-                  {/* CÉLULA VEGETAL */}
-                  <div>
-                    <h3 className="text-xl font-bold text-charcoal mb-2 uppercase tracking-wide border-b-2 border-charcoal/10 pb-1">Célula Vegetal</h3>
-                    <div className="bg-paper-white/50 p-3 rounded-xl border border-charcoal/10">
-                      <div className="flex flex-col justify-center bg-white/50 rounded-lg p-2 mb-3 shadow-inner border border-charcoal/10 overflow-hidden">
-                        <ARImage 
-                          src="/vegetal.png" 
-                          alt="Célula Vegetal" 
-                          title="Vegetal-LVL200"
-                          onScanClick={() => setIsScannerOpen(true)}
-                        />
-                      </div>
-                      <div className="flex justify-between items-center px-1">
-                        <div className="text-[10px] font-mono text-charcoal/50 uppercase tracking-widest">Target: BioScan_VEG_200</div>
-                        <div className="flex gap-2 items-center">
-                          <button 
-                            onClick={() => setIsScannerOpen(true)}
-                            className="text-[9px] bg-charcoal text-white px-2 py-1 rounded font-bold hover:bg-highlight-yellow hover:text-charcoal transition-colors"
-                          >
-                            MODO AR (CAM)
-                          </button>
-                          <QRTag id="200" />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                  {/* Actividad AR */}
                   <div className="mt-4 mb-2">
                     <div className="bg-charcoal/5 border border-charcoal/20 p-4 rounded-xl shadow-sm">
                       <h3 className="text-[16px] font-bold text-ink-black mb-3 flex items-center gap-2">
@@ -413,7 +350,79 @@ export default function Home() {
 
             {/* Right Page 4 */}
             <BookPage>
-              <section className="mb-6 flex-grow flex flex-col">
+              <section className="mb-6 flex-grow flex flex-col overflow-y-auto">
+
+                {/* EUCARIOTA - Moved here from page 3 */}
+                <div className="mb-4">
+                    <h3 className="text-xl font-bold text-charcoal mb-2 uppercase tracking-wide border-b-2 border-charcoal/10 pb-1">Célula Eucariota</h3>
+                    <div className="bg-paper-white/50 p-3 rounded-xl border border-charcoal/10">
+                      <div className="flex flex-col justify-center bg-white/50 rounded-lg p-2 mb-3 shadow-inner border border-charcoal/10 overflow-hidden">
+                        <ARImage 
+                          src="/eukaryotic.png" 
+                          alt="Célula Eucariota" 
+                          title="Eucariota-LVL100"
+                          onScanClick={() => setIsScannerOpen(true)}
+                        />
+                      </div>
+                      <div className="flex justify-between items-center px-1">
+                        <div className="text-[10px] font-mono text-charcoal/50 uppercase tracking-widest">Target: BioScan_EUK_100</div>
+                        <div className="flex gap-2 items-center">
+                          <button 
+                            onClick={() => setIsScannerOpen(true)}
+                            className="text-[9px] bg-charcoal text-white px-2 py-1 rounded font-bold hover:bg-highlight-yellow hover:text-charcoal transition-colors"
+                          >
+                            MODO AR (CAM)
+                          </button>
+                          <QRTag id="100" />
+                        </div>
+                      </div>
+                      
+                      {/* Componentes */}
+                      <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 mt-2">
+                         <OrganelleItem icon={<IconNucleo />} title="Núcleo" desc="Controla, almacena ADN" />
+                         <OrganelleItem icon={<IconCitoplasmaAzul />} title="Citoplasma" desc="Medio con organelos" />
+                         <OrganelleItem icon={<IconRibosomaAzul />} title="Ribosomas" desc="Sintetizan proteínas" />
+                         <OrganelleItem icon={<IconMitocondria />} title="Mitocondria" desc="Produce energía (ATP)" />
+                         <OrganelleItem icon={<IconGolgi />} title="Aparato de Golgi" desc="Produce energía (ATP)" />
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* CÉLULA VEGETAL - Moved here from page 3 */}
+                  <div className="mb-4">
+                    <h3 className="text-xl font-bold text-charcoal mb-2 uppercase tracking-wide border-b-2 border-charcoal/10 pb-1">Célula Vegetal</h3>
+                    <div className="bg-paper-white/50 p-3 rounded-xl border border-charcoal/10">
+                      <div className="flex flex-col justify-center bg-white/50 rounded-lg p-2 mb-3 shadow-inner border border-charcoal/10 overflow-hidden">
+                        <ARImage 
+                          src="/vegetal.png" 
+                          alt="Célula Vegetal" 
+                          title="Vegetal-LVL200"
+                          onScanClick={() => setIsScannerOpen(true)}
+                        />
+                      </div>
+                      <div className="flex justify-between items-center px-1">
+                        <div className="text-[10px] font-mono text-charcoal/50 uppercase tracking-widest">Target: BioScan_VEG_200</div>
+                        <div className="flex gap-2 items-center">
+                          <button 
+                            onClick={() => setIsScannerOpen(true)}
+                            className="text-[9px] bg-charcoal text-white px-2 py-1 rounded font-bold hover:bg-highlight-yellow hover:text-charcoal transition-colors"
+                          >
+                            MODO AR (CAM)
+                          </button>
+                          <QRTag id="200" />
+                        </div>
+                      </div>
+                      
+                      {/* Componentes vegetales */}
+                      <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 mt-2">
+                         <OrganelleItem icon={<IconCloroplasto />} title="Cloroplasto" desc="Realizan fotosíntesis" />
+                         <OrganelleItem icon={<IconParedVerde />} title="Pared celular" desc="Da forma y protección" />
+                         <OrganelleItem icon={<IconVacuola />} title="Vacuola" desc="Almacena protección" />
+                         <OrganelleItem icon={<IconMembranaVerde />} title="Membrana" desc="Paso de sustancias" />
+                      </div>
+                    </div>
+                  </div>
+
                 <h2 className="text-2xl font-bold font-inter mb-4 text-ink-black/90">Eligiendo tu Bando: Los Dos Grandes Clanes</h2>
                 
                 <p className="mb-5 text-sm md:text-[15px] leading-relaxed text-charcoal text-justify">
