@@ -323,6 +323,31 @@ export default function Home() {
                     </div>
                   </div>
 
+                  {/* Eligiendo tu Bando - moved here from page 4 */}
+                  <h2 className="text-2xl font-bold font-inter mt-4 mb-4 text-ink-black/90">Eligiendo tu Bando: Los Dos Grandes Clanes</h2>
+                
+                  <p className="mb-5 text-sm md:text-[15px] leading-relaxed text-charcoal text-justify">
+                    Dentro del inmenso imperio de las Células Eucariotas, existen dos facciones principales con estrategias de supervivencia completamente distintas. Tu estilo de juego dependerá de a qué clan pertenezcas. ¿Prefieres generar tu propia energía solar y construir defensas impenetrables, o moverte libremente cazando recursos con un diseño más flexible? Analiza las características de cada facción:
+                  </p>
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                    {/* Clan Vegetal */}
+                    <div className="bg-plant-green-light/10 border border-plant-green/30 p-4 rounded-xl shadow-sm">
+                      <h3 className="font-bold text-plant-green text-lg mb-2 flex items-center gap-2">🍃 El Clan Vegetal</h3>
+                      <p className="text-[13px] leading-relaxed text-charcoal">
+                        Como las plantas no pueden moverse del lugar, su base necesita ser súper resistente. Por eso, su célula tiene una <strong>Muralla Extra-Fuerte (Pared Celular)</strong> por fuera de la membrana para no derrumbarse. Además, no necesitan salir a buscar recursos: tienen <strong>Paneles Solares (Cloroplastos)</strong> que fabrican su propia comida usando solo la luz del sol.
+                      </p>
+                    </div>
+
+                    {/* Clan Animal */}
+                    <div className="bg-animal-blue-light/10 border border-animal-blue/30 p-4 rounded-xl shadow-sm">
+                      <h3 className="font-bold text-animal-blue text-lg mb-2 flex items-center gap-2">🐾 El Clan Animal</h3>
+                      <p className="text-[13px] leading-relaxed text-charcoal">
+                        ¡Aquí jugamos nosotros! Como los animales nos movemos para cazar o recolectar comida, nuestro muro debe ser blandito y flexible (solo tenemos <strong>membrana</strong>). Como no tenemos paneles solares, necesitamos que nuestras <strong>Centrales Eléctricas (Mitocondrias)</strong> trabajen a tope todo el tiempo para darnos energía.
+                      </p>
+                    </div>
+                  </div>
+
                   <div className="mt-4 flex flex-col md:flex-row gap-4">
                     <div className="flex-1">
                       <MarginCard type="mission" title="Misión Secundaria">
@@ -423,29 +448,7 @@ export default function Home() {
                     </div>
                   </div>
 
-                <h2 className="text-2xl font-bold font-inter mb-4 text-ink-black/90">Eligiendo tu Bando: Los Dos Grandes Clanes</h2>
-                
-                <p className="mb-5 text-sm md:text-[15px] leading-relaxed text-charcoal text-justify">
-                  Dentro del inmenso imperio de las Células Eucariotas, existen dos facciones principales con estrategias de supervivencia completamente distintas. Tu estilo de juego dependerá de a qué clan pertenezcas. ¿Prefieres generar tu propia energía solar y construir defensas impenetrables, o moverte libremente cazando recursos con un diseño más flexible? Analiza las características de cada facción:
-                </p>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-                  {/* Clan Vegetal */}
-                  <div className="bg-plant-green-light/10 border border-plant-green/30 p-4 rounded-xl shadow-sm">
-                    <h3 className="font-bold text-plant-green text-lg mb-2 flex items-center gap-2">🍃 El Clan Vegetal</h3>
-                    <p className="text-[13px] leading-relaxed text-charcoal">
-                      Como las plantas no pueden moverse del lugar, su base necesita ser súper resistente. Por eso, su célula tiene una <strong>Muralla Extra-Fuerte (Pared Celular)</strong> por fuera de la membrana para no derrumbarse. Además, no necesitan salir a buscar recursos: tienen <strong>Paneles Solares (Cloroplastos)</strong> que fabrican su propia comida usando solo la luz del sol.
-                    </p>
-                  </div>
-
-                  {/* Clan Animal */}
-                  <div className="bg-animal-blue-light/10 border border-animal-blue/30 p-4 rounded-xl shadow-sm">
-                    <h3 className="font-bold text-animal-blue text-lg mb-2 flex items-center gap-2">🐾 El Clan Animal</h3>
-                    <p className="text-[13px] leading-relaxed text-charcoal">
-                      ¡Aquí jugamos nosotros! Como los animales nos movemos para cazar o recolectar comida, nuestro muro debe ser blandito y flexible (solo tenemos <strong>membrana</strong>). Como no tenemos paneles solares, necesitamos que nuestras <strong>Centrales Eléctricas (Mitocondrias)</strong> trabajen a tope todo el tiempo para darnos energía.
-                    </p>
-                  </div>
-                </div>
 
                 {/* Tabla de Configuracion */}
                 <h3 className="text-[16px] font-bold text-ink-black mb-2 flex items-center gap-2">
