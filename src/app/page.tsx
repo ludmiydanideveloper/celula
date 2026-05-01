@@ -326,7 +326,32 @@ export default function Home() {
                     </div>
                   </div>
 
-                  {/* Actividad AR */}
+                  {/* CÉLULA VEGETAL */}
+                  <div>
+                    <h3 className="text-xl font-bold text-charcoal mb-2 uppercase tracking-wide border-b-2 border-charcoal/10 pb-1">Célula Vegetal</h3>
+                    <div className="bg-paper-white/50 p-3 rounded-xl border border-charcoal/10">
+                      <div className="flex flex-col justify-center bg-white/50 rounded-lg p-2 mb-3 shadow-inner border border-charcoal/10 overflow-hidden">
+                        <ARImage 
+                          src="/vegetal.png" 
+                          alt="Célula Vegetal" 
+                          title="Vegetal-LVL200"
+                          onScanClick={() => setIsScannerOpen(true)}
+                        />
+                      </div>
+                      <div className="flex justify-between items-center px-1">
+                        <div className="text-[10px] font-mono text-charcoal/50 uppercase tracking-widest">Target: BioScan_VEG_200</div>
+                        <div className="flex gap-2 items-center">
+                          <button 
+                            onClick={() => setIsScannerOpen(true)}
+                            className="text-[9px] bg-charcoal text-white px-2 py-1 rounded font-bold hover:bg-highlight-yellow hover:text-charcoal transition-colors"
+                          >
+                            MODO AR (CAM)
+                          </button>
+                          <QRTag id="200" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                   <div className="mt-4 mb-2">
                     <div className="bg-charcoal/5 border border-charcoal/20 p-4 rounded-xl shadow-sm">
                       <h3 className="text-[16px] font-bold text-ink-black mb-3 flex items-center gap-2">
